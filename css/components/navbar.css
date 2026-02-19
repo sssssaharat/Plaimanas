@@ -82,35 +82,137 @@
 .navbar__menu {
   display: flex;
   gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.has-dropdown {
+.navbar__link {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+}
+.navbar__link:hover {
+  font-weight: 700;
+  transform: scale(1.38);
+}
+.editorial-wrapper {
   position: relative;
+  z-index: 20;
 }
 
-.editorial-dropdown {
+.editorial-panel {
   position: absolute;
   top: 100%;
-  left: 0;
-  background: black;
-  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 116px;
+  height: 162px;
+  gap: 6px;
+
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
-  padding: 20px;
-}
+  transition: opacity 0.3s ease-in-out;
 
-.has-dropdown:hover .editorial-dropdown {
+  z-index: 10;
+}
+.editorial-wrapper:hover .editorial-panel {
   opacity: 1;
   visibility: visible;
 }
 
+.editorial-wrapper:hover .editorial-bg {
+  opacity: 1;
+  visibility: visible;
+}
+
+.editorial-panel h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.editorial-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.editorial-panel li {
+  margin: 12px 0;
+}
+
+.editorial-panel a {
+  display: inline-block; 
+  color: white;
+  text-decoration: none;
+
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out, font-weight 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+
+.editorial-panel a:hover {
+  font-weight: 700;
+  transform: scale(1.08);
+  letter-spacing: 0.5px;
+}
+.editorial-bg {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 5;
+  pointer-events: none;
+}
 /* RIGHT */
 
 .navbar__right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+.navbar__right a:hover {
+  opacity: 50%;
+}
+
+.cart-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-btn img {
+  width: 24px; 
+  height: 24px; 
+  object-fit: contain;
 }
 
 /* ===== STICKY STATE ===== */
