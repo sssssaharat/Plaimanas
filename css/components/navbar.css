@@ -1,0 +1,85 @@
+/* ===== NAVBAR BASE ===== */
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+/* LEFT */
+
+.currency {
+  position: relative;
+}
+
+.currency__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  display: none;
+  padding: 10px 15px;
+}
+
+.currency.active .currency__dropdown {
+  display: block;
+}
+
+/* CENTER */
+
+.navbar__menu {
+  display: flex;
+  gap: 40px;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.editorial-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: black;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.has-dropdown:hover .editorial-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* RIGHT */
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ===== STICKY STATE ===== */
+
+.navbar--sticky {
+  position: fixed;
+  background: white;
+}
+
+/* ===== SHRINK STATE ===== */
+
+.navbar--shrink {
+  padding: 10px 0;
+}
