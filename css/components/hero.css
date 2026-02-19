@@ -10,7 +10,7 @@
   object-fit: cover;
 }
 
-.hero__title {
+/* .hero__title {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -19,4 +19,22 @@
   font-weight: 700;
   color: rgba(255,255,255,0.8);
   letter-spacing: 10px;
+} */
+.hero__title {
+  /* โค้ดเดิมของคุณที่ตั้งค่าฟอนต์ สีขาว ฯลฯ ให้คงไว้ */
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  letter-spacing: 2px;
+
+  /* ปรับตำแหน่งให้อยู่บนสุดตามเรฟเฟอเรนซ์ */
+  position: absolute;
+  top: 45px; /* ชิดขอบใต้ Navbar พอดี */
+  left: 0;
+  width: 100%;
+  font-size: 16vw; 
+  line-height: 0.8;
+  margin: 0;
+  z-index: 10;
 }

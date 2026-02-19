@@ -227,3 +227,23 @@
 .navbar--shrink {
   padding: 10px 0;
 }
+
+/* ===== MOBILE ELEMENTS (Hidden on Desktop) ===== */
+.hamburger {
+  display: none; 
+}
+
+.navbar__brand-mobile {
+  display: none; 
+}
+
+.mobile-arrow {
+  display: none;
+}
+.hamburger { display: none; }
+.navbar__brand-mobile { display: none; }
+.mobile-arrow { display: none; }
+
+.mobile-only-item {
+  display: none;
+}
