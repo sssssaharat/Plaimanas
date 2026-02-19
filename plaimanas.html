@@ -15,13 +15,18 @@
 
             <!-- LEFT -->
             <div class="navbar__left">
-                <div class="currency">
-                    <button class="currency__btn">
-                        TH - THB ▾
+                <div class="currency" id="currency">
+                    <button class="currency__btn" aria-haspopup="true" aria-expanded="false">
+                        TH - THB
+                        <span class="currency__arrow">▾</span>
                     </button>
 
                     <ul class="currency__dropdown">
-                        <li>US - USD</li>
+                        <li>
+                            <button class="currency__option">
+                                US - USD
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
