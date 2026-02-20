@@ -1,8 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ==========================================
   // 1. ระบบ Currency Dropdown
-  // ==========================================
   const currency = document.getElementById("currency");
   if (currency) {
     const btn = currency.querySelector(".currency__btn");
@@ -21,9 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
   // 2. ระบบ Mobile Menu (Hamburger & Overlay)
-  // ==========================================
   const hamburger = document.getElementById("hamburgerMenu");
   const navMenuWrapper = document.getElementById("navMenuWrapper");
   const body = document.body;
@@ -42,9 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==========================================
   // 3. ระบบเมนูย่อย Editorial บนมือถือ (Accordion)
-  // ==========================================
   const editorialToggle = document.getElementById("editorialToggle");
   const editorialWrapper = document.getElementById("editorialWrapper");
 
