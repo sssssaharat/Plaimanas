@@ -263,3 +263,38 @@
 .flip-right {
   transform: scaleX(-1);
 }
+/*services SECTION */
+.services-info {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 20px; 
+}
+
+.services-info__container {
+  max-width: 1092px; 
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; 
+}
+
+.service-item h3 {
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  color: #000000;
+  
+}
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px; 
+  text-decoration-color: #666666;
+}
+.service-item p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666666; 
+  margin: 0;
+}

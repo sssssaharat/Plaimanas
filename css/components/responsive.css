@@ -232,4 +232,15 @@
     width: 38px;
     height: auto;
   }
+  /* ===== SERVICES INFO (Mobile) ===== */
+  .services-info {
+    padding: 60px 0; 
+  }
+  .services-info__container {
+    max-width: 346px; 
+    margin: 0 auto;
+    padding: 0 22px;
+    grid-template-columns: 1fr; 
+    gap: 48px; 
+  }
 }
