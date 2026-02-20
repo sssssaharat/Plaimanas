@@ -1,7 +1,7 @@
 /* ===== NAVBAR BASE ===== */
 
 .navbar {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 45px;
   top: 0;
@@ -26,7 +26,6 @@
 }
 
 .currency__btn {
-  font-family: Inter;
   font-weight: 400;
   font-size: 13px;
   text-transform: uppercase;
@@ -89,7 +88,6 @@
 }
 
 .navbar__link {
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 100%;
@@ -157,7 +155,6 @@
   color: white;
   text-decoration: none;
 
-  font-family: Inter;
   font-weight: 400;
   font-size: 13px;
   text-transform: uppercase;
@@ -188,7 +185,6 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 100%;

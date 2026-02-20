@@ -1,40 +1,32 @@
+/* ===== HERO SECTION ===== */
 .hero {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 45px); 
+  margin-top: 45px; 
 }
 
 .hero__media {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; 
+  display: block;
 }
 
-/* .hero__title {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14vw;
-  font-weight: 700;
-  color: rgba(255,255,255,0.8);
-  letter-spacing: 10px;
-} */
 .hero__title {
-  /* โค้ดเดิมของคุณที่ตั้งค่าฟอนต์ สีขาว ฯลฯ ให้คงไว้ */
-  font-family: 'Inter', sans-serif;
-  font-weight: 900;
-  color: rgba(255,255,255,0.8);
-  text-align: center;
-  letter-spacing: 2px;
-
-  /* ปรับตำแหน่งให้อยู่บนสุดตามเรฟเฟอเรนซ์ */
-  position: absolute;
-  top: 45px; /* ชิดขอบใต้ Navbar พอดี */
+  position: fixed; 
+  top: 45px; 
   left: 0;
   width: 100%;
+  z-index: 50; 
+  margin: 0;
+  font-weight: 900;
   font-size: 16vw; 
   line-height: 0.8;
-  margin: 0;
-  z-index: 10;
+  text-align: center;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: white; 
+  mix-blend-mode: difference; 
+  pointer-events: none; 
 }
