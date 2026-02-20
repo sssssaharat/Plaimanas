@@ -215,4 +215,21 @@
     max-width: 282px !important;
     aspect-ratio: 282 / 286 !important;
   }
+
+  /* ===== scrolling ===== */
+  .scrolling-text {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .scrolling-text__content {
+    font-size: 40px; 
+    gap: 40px;
+    padding-right: 40px;
+  }
+
+  .scrolling-arrow {
+    width: 38px;
+    height: auto;
+  }
 }
