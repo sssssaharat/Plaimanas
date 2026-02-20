@@ -39,6 +39,7 @@
 .currency__dropdown {
   position: absolute;
   top: 100%;
+  left: 0;
   display: none;
   min-width: 70px;
   background: white;
@@ -49,7 +50,7 @@
 
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .currency__option {
