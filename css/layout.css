@@ -35,14 +35,13 @@
 /*featured SECTION */
 .media-narrow {
   width: 100% !important;
-  max-width: 566px !important; 
+  max-width: 566px !important;
   aspect-ratio: 566 / 572 !important;
   margin: 0 auto;
 }
 .featured-block {
   width: 100%;
-  padding: 120px 20px;
-  position: relative;
+padding: 120px 20px 60px 20px;  position: relative;
   background-color: #ffffff;
   z-index: 1;
 }
@@ -120,6 +119,9 @@
   color: #000;
   margin: 0 auto;
   text-wrap: balance;
+}
+.featured-block + .featured-block {
+  padding-top: 0;
 }
 
 /*COLLECTIONS GRID SECTION */

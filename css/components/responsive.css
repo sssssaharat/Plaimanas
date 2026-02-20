@@ -177,8 +177,11 @@
   }
 
   /* ===== featured ===== */
+  .featured-block + .featured-block {
+    padding-top: 0;
+  }
   .featured-block {
-    padding: 60px 22px;
+    padding: 60px 22px 20px 22px;
   }
 
   .featured-block__media-wrapper {
