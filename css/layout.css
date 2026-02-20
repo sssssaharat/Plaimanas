@@ -78,7 +78,7 @@
   top: 30vh;
 
   font-weight: 900;
-  font-size: 8vw;
+  font-size: clamp(40px, 6vw, 80px);
   color: white;
   text-align: center;
   margin: 0;
