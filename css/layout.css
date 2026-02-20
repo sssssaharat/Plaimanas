@@ -33,6 +33,12 @@
 }
 
 /*featured SECTION */
+.media-narrow {
+  width: 100% !important;
+  max-width: 566px !important; 
+  aspect-ratio: 566 / 572 !important;
+  margin: 0 auto;
+}
 .featured-block {
   width: 100%;
   padding: 120px 20px;

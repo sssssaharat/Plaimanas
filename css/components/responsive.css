@@ -208,4 +208,8 @@
     top: 40%;
     bottom: 0;
   }
+  .media-narrow {
+    max-width: 282px !important;
+    aspect-ratio: 282 / 286 !important;
+  }
 }
