@@ -223,7 +223,7 @@
   }
 
   .scrolling-text__content {
-    font-size: 40px; 
+    font-size: 40px;
     gap: 40px;
     padding-right: 40px;
   }
@@ -234,13 +234,75 @@
   }
   /* ===== SERVICES INFO (Mobile) ===== */
   .services-info {
-    padding: 60px 0; 
+    padding: 60px 0;
   }
   .services-info__container {
-    max-width: 346px; 
+    max-width: 346px;
     margin: 0 auto;
     padding: 0 22px;
-    grid-template-columns: 1fr; 
-    gap: 48px; 
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  /* ===== FAQ ===== */
+  .faq-section {
+    padding: 60px 22px;
+  }
+
+  .faq-title {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .faq-tabs {
+    display: flex;
+    flex-direction: column; /* 👈 หัวใจสำคัญ: สั่งให้เรียงเป็นแนวตั้ง */
+    align-items: center; /* 👈 จัดให้อยู่กึ่งกลางหน้าจอ */
+    gap: 10px; /* 👈 ระยะห่าง 10px ตามสเปคเป๊ะๆ */
+
+    width: 100%;
+    max-width: 346px; /* 👈 ล็อคความกว้างตาม Figma */
+    margin: 0 auto 40px auto; /* จัดกึ่งกลาง และเว้นระยะด้านล่างก่อนถึงคำถาม */
+    padding: 0;
+  }
+
+  .faq-tab {
+    width: max-content; /* 👈 ให้ปุ่มหดพอดีกับตัวหนังสือข้างใน */
+    padding: 10px 24px; /* ปรับ padding ให้ปุ่มดูสวยสมส่วนกับแนวตั้ง */
+    font-size: 11px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .faq-question {
+    font-size: 14px;
+    padding: 20px 0;
+    padding-right: 20px;
+  }
+
+  /* ===== MAKE AN INQUIRY (Mobile) ===== */
+  .inquiry-section {
+    padding: 60px 0;
+  }
+
+  .inquiry-container {
+    max-width: 346px; /* กว้างตาม Figma Mobile */
+    margin: 0 auto;
+    padding: 0 22px;
+
+    flex-direction: column; /* เปลี่ยนมาเรียงแนวตั้ง */
+    gap: 60px; /* ระยะห่างระหว่างหัวข้อกับฟอร์ม */
+  }
+
+  .inquiry-title {
+    font-size: 36px; /* ลดขนาดฟอนต์หัวข้อลงนิดนึง */
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr; /* ยุบ Input เหลือคอลัมน์เดียว */
+    gap: 40px; /* เพิ่มระยะห่างแนวตั้งให้แตะง่ายขึ้น */
+  }
+
+  .inquiry-submit {
+    width: 100%; /* ให้ปุ่มกว้างเต็มจอในมือถือ */
   }
 }

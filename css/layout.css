@@ -267,15 +267,15 @@
 .services-info {
   width: 100%;
   background-color: #ffffff;
-  padding: 80px 20px; 
+  padding: 80px 20px;
 }
 
 .services-info__container {
-  max-width: 1092px; 
+  max-width: 1092px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px; 
+  gap: 40px;
 }
 
 .service-item h3 {
@@ -284,17 +284,282 @@
   text-transform: uppercase;
   margin: 0 0 16px 0;
   color: #000000;
-  
 }
 .underline {
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 3px; 
+  text-underline-offset: 3px;
   text-decoration-color: #666666;
 }
 .service-item p {
   font-size: 14px;
   line-height: 1.5;
-  color: #666666; 
+  color: #666666;
   margin: 0;
+}
+/*FAQ SECTION */
+.faq-section {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 80px 20px;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+}
+
+.faq-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #cccccc;
+  margin: 0 0 40px 0;
+}
+
+.faq-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 60px;
+}
+
+.faq-tab {
+  background-color: #828282;
+  color: #ffffff;
+  border: 1px solid #adadad;
+  padding: 8px 24px;
+  border-radius: 100px;
+  font-family: "inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.faq-tab:hover {
+  border-color: #ffffff;
+  background-color: #969696;
+}
+
+.faq-tab.active {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.faq-content {
+  display: none;
+}
+
+.faq-content.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-item {
+  border-bottom: 1px solid #333333;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid #333333;
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  text-align: left;
+  padding: 24px 0;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-icon {
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  transform: translateY(-3px) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: translateY(3px) rotate(-135deg);
+}
+
+.faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-item.active .faq-answer-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer {
+  overflow: hidden;
+}
+
+.faq-answer p {
+  margin: 0 0 24px 0;
+  font-size: 14px;
+  color: #999999;
+  line-height: 1.6;
+}
+
+/* =========================================
+   MAKE AN INQUIRY SECTION
+   ========================================= */
+.inquiry-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #000000;
+}
+
+.inquiry-container {
+  max-width: 1092px; /* กว้างสุดตาม Figma Desktop */
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 74px; /* ช่องไฟระหว่างข้อความกับฟอร์มเป๊ะๆ */
+}
+
+/* --- ด้านซ้าย (ข้อความ) --- */
+.inquiry-content {
+  flex: 1; /* แบ่งพื้นที่ครึ่งนึง */
+}
+
+.inquiry-title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+  letter-spacing: -1px;
+}
+
+.inquiry-desc {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 400px;
+}
+
+/* --- ด้านขวา (ฟอร์ม) --- */
+.inquiry-form {
+  flex: 1; /* แบ่งพื้นที่อีกครึ่งนึง */
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* ระยะห่างระหว่างแต่ละแถวของฟอร์ม */
+}
+
+/* Radio Buttons */
+.radio-group {
+  display: flex;
+  gap: 24px;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Inputs & Grid */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* แบ่ง 2 คอลัมน์ */
+  gap: 30px 24px; /* ระยะห่างแนวตั้ง 30px แนวนอน 24px */
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.input-label {
+  font-size: 10px;
+  color: #999999;
+  margin-bottom: 4px;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000000; /* เส้นใต้มินิมอล */
+  padding: 8px 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #000000;
+  background: transparent;
+  outline: none;
+}
+
+.input-wrapper input::placeholder {
+  color: #999999;
+}
+
+/* Checkbox */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #666666;
+  cursor: pointer;
+}
+
+/* ปุ่ม Submit */
+.inquiry-submit {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 16px 40px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: max-content;
+  transition: background-color 0.3s ease;
+}
+
+.inquiry-submit:hover {
+  background-color: #333333;
 }
