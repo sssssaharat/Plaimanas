@@ -333,15 +333,15 @@
 }
 
 .faq-tab {
-  background-color: #828282;
+  background-color: #ffffff33;
   color: #ffffff;
-  border: 1px solid #adadad;
+  border: 0.5px solid #828282;
   padding: 8px 24px;
   border-radius: 100px;
   font-family: "inter", sans-serif;
   font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0%;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -708,7 +708,7 @@
 .homepage-section {
   background-color: #ffffff;
   width: 100%;
-  padding-top: 40px; 
+  padding-top: 40px;
 }
 
 .footer-top-text {
@@ -716,7 +716,7 @@
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
-  margin-bottom: 12px; 
+  margin-bottom: 12px;
 }
 
 .site-footer {
@@ -729,7 +729,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 40px; 
+  padding: 0 40px;
 }
 
 .footer-links-grid {
