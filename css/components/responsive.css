@@ -174,7 +174,13 @@
   }
 
   .collection-item__title {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .collection-item__title1 {
+    font-size: 30px;
     line-height: 1.2;
     width: 100%;
     padding: 0 10px;
@@ -243,7 +249,7 @@
   }
 
   .scrolling-text__content {
-    font-size: 40px;
+    font-size: 24px;
     gap: 40px;
     padding-right: 40px;
   }
@@ -268,11 +274,13 @@
 
   .service-item h3 {
     font-size: 16px;
+    font-weight: 700;
     margin-bottom: 12px;
   }
 
   .service-item p {
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.6;
   }
   /* ===== FAQ ===== */
@@ -281,7 +289,8 @@
   }
 
   .faq-title {
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: 900;
     line-height: 1.1;
   }
 
@@ -300,15 +309,20 @@
   .faq-tab {
     width: max-content;
     padding: 10px 24px;
-    font-size: 11px;
-    font-weight: 800;
+    font-size: 13px;
+    font-weight: 400;
     text-align: center;
   }
 
   .faq-question {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 700;
     padding: 20px 0;
     padding-right: 20px;
+  }
+  .faq-answer {
+    font-size: 14px;
+    font-weight: 400;
   }
 
   /* ===== MAKE AN INQUIRY (Mobile) ===== */
@@ -332,6 +346,7 @@
 
   .inquiry-title {
     font-size: 40px;
+    font-weight: 900;
     line-height: 1.1;
   }
 
@@ -349,6 +364,12 @@
     width: max-content;
     padding: 16px 40px;
     margin-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .floating-label .custom-radio {
+    font-weight: 400;
+    font-size: 14px;
   }
 
   /* ===== FOOTER (Mobile) ===== */

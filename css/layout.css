@@ -184,7 +184,8 @@
   opacity: 1;
 }
 
-.collection-item__title {
+.collection-item__title,
+.collection-item__title1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -543,7 +544,6 @@
   border: none;
   border-bottom: 1px solid #000000;
   padding: 8px 0;
-  font-family: "Hanken Grotesk", sans-serif;
   font-size: 14px;
   color: #000000;
   background: transparent;
@@ -617,7 +617,6 @@
   color: #ffffff;
   border: none;
   padding: 16px 40px;
-  font-family: "Hanken Grotesk", sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
