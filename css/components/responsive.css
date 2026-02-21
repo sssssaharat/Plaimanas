@@ -380,11 +380,22 @@
     grid-column: span 2;
     margin-top: 10px;
   }
+  .footer-title {
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .footer-list {
+    font-weight: 400;
+    font-size: 12px;
+  }
 
   .footer-bottom {
     padding: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 }
