@@ -434,7 +434,6 @@
   color: #999999;
   line-height: 1.6;
 }
-
 /* =========================================
    MAKE AN INQUIRY SECTION
    ========================================= */
@@ -456,7 +455,11 @@
 
 /* --- ด้านซ้าย (ข้อความ) --- */
 .inquiry-content {
-  flex: 1; /* แบ่งพื้นที่ครึ่งนึง */
+  width: 100%;
+  max-width: 375px; /* ล็อคความกว้างเป๊ะๆ ตามรูป */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* ระยะห่างระหว่างหัวข้อกับข้อความ */
 }
 
 .inquiry-title {
@@ -464,7 +467,7 @@
   font-weight: 900;
   line-height: 1;
   text-transform: uppercase;
-  margin: 0 0 16px 0;
+  margin: 0; /* ลบ margin เดิมทิ้ง เพราะเราใช้ gap จัดการแล้ว */
   letter-spacing: -1px;
 }
 
@@ -473,18 +476,18 @@
   color: #000000;
   line-height: 1.5;
   margin: 0;
-  max-width: 400px;
 }
 
 /* --- ด้านขวา (ฟอร์ม) --- */
 .inquiry-form {
-  flex: 1; /* แบ่งพื้นที่อีกครึ่งนึง */
+  width: 100%;
+  max-width: 644px; /* ล็อคความกว้างเป๊ะๆ ตามรูป */
   display: flex;
   flex-direction: column;
-  gap: 30px; /* ระยะห่างระหว่างแต่ละแถวของฟอร์ม */
+  gap: 40px; /* ระยะห่าง 40px ตามรูป */
 }
 
-/* Radio Buttons */
+/* --- แต่ง Custom Radio Button ให้เป็นสีดำคลีนๆ --- */
 .radio-group {
   display: flex;
   gap: 24px;
@@ -498,11 +501,40 @@
   cursor: pointer;
 }
 
-/* Inputs & Grid */
+/* ซ่อนสไตล์สีฟ้าของระบบ และวาดวงกลมใหม่ด้วย CSS */
+.custom-radio input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+/* จุดสีดำตรงกลางตอนถูกเลือก (Checked) */
+.custom-radio input[type="radio"]::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: #000000;
+}
+
+.custom-radio input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+/* --- Inputs & Grid --- */
 .input-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* แบ่ง 2 คอลัมน์ */
-  gap: 30px 24px; /* ระยะห่างแนวตั้ง 30px แนวนอน 24px */
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 24px; /* เพิ่มระยะห่างแนวตั้งนิดนึง เผื่อที่ให้ Label ลอยขึ้นไป */
 }
 
 .input-wrapper {
@@ -510,19 +542,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-.input-label {
-  font-size: 10px;
-  color: #999999;
-  margin-bottom: 4px;
+  padding-top: 20px; /* เตรียมพื้นที่ด้านบนไว้ให้ Label ลอยไปเกาะ */
 }
 
 .input-wrapper input,
 .input-wrapper select {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #000000; /* เส้นใต้มินิมอล */
+  border-bottom: 1px solid #000000;
   padding: 8px 0;
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 14px;
@@ -531,17 +558,78 @@
   outline: none;
 }
 
+/* ซ่อน Placeholder ดั้งเดิมที่เราใส่สเปซบาร์หลอกไว้ */
 .input-wrapper input::placeholder {
+  color: transparent;
+}
+
+/* =========================================
+   ลูกเล่น FLOATING LABEL
+   ========================================= */
+.floating-label {
+  position: absolute;
+  bottom: 8px; /* เริ่มต้นให้อยู่ทับเส้นบรรทัดพอดี */
+  left: 0;
+  font-size: 14px;
   color: #999999;
+  pointer-events: none; /* เพื่อให้คลิกทะลุไปโดน input ได้ */
+  transition: all 0.3s ease; /* แอนิเมชันลอยขึ้นแบบสมูทๆ */
+}
+
+/* เมื่อคลิก (focus) หรือ พิมพ์ไปแล้ว (not placeholder-shown) ให้ Label ลอยขึ้น! */
+.input-wrapper input:focus ~ .floating-label,
+.input-wrapper input:not(:placeholder-shown) ~ .floating-label {
+  bottom: 32px; /* ลอยขึ้นไปด้านบน */
+  font-size: 10px; /* ย่อขนาดให้เล็กเหมือนตัวอย่าง Email* */
+}
+
+/* สำหรับ Select: เมื่อถูกเลือกแล้ว (valid) หรือถูกคลิก (focus) ให้ลอยขึ้นเช่นกัน */
+.input-wrapper select:focus ~ .floating-label,
+.input-wrapper select:valid ~ .floating-label {
+  bottom: 32px;
+  font-size: 10px;
+}
+
+/* =========================================
+   แต่ง DROPDOWN SELECT ให้เป็นสีขาวคลีน
+   ========================================= */
+.input-wrapper select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 16px;
+  padding-right: 24px;
+  cursor: pointer;
+  color-scheme: light;
+}
+
+/* ซ่อนตัวหนังสือระบบชั่วคราวตอนยังไม่เลือก (ให้โชว์แค่ Floating Label) */
+.input-wrapper select:invalid {
+  color: transparent;
+}
+
+/* เมื่อเลือกข้อมูลแล้ว ให้ตัวหนังสือเปลี่ยนเป็นสีดำเข้ม */
+.input-wrapper select:valid {
+  color: #000000;
+}
+
+/* บังคับพื้นหลัง Option เป็นสีขาว ตัวหนังสือดำ (แก้ปัญหาสีดำทะมึนใน Mac/iOS) */
+.input-wrapper select option {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
 }
 
 /* Checkbox */
 .custom-checkbox {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   font-size: 14px;
-  color: #666666;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
@@ -562,4 +650,85 @@
 
 .inquiry-submit:hover {
   background-color: #333333;
+}
+
+/* =========================================
+   CUSTOM DROPDOWN (แก้ปัญหา Apple Dark Mode)
+   ========================================= */
+.custom-dropdown-wrapper {
+  position: relative;
+}
+
+/* ปุ่ม Select จำลอง */
+.custom-select-box {
+  width: 100%;
+  border-bottom: 1px solid #000000;
+  padding: 8px 0;
+  min-height: 35px; /* เผื่อความสูงให้เท่าช่องอื่น */
+  cursor: pointer;
+  position: relative;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #000000;
+}
+
+/* รูปลูกศรของปุ่มจำลอง */
+.custom-select-box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* เมื่อคลิกเปิด ให้ลูกศรชี้ขึ้น */
+.custom-select-box.is-open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* กล่องตัวเลือกสีขาว */
+.custom-options-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* ขาวล้วนแน่นอน 100% */
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: none; /* ซ่อนไว้ก่อน */
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.custom-options-list.show {
+  display: flex;
+}
+
+/* รายการตัวเลือกด้านใน */
+.custom-option {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #000000;
+  font-family: "Hanken Grotesk", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.custom-option:hover {
+  background-color: #f5f5f5; /* สีเทาอ่อนตอนเอาเมาส์ชี้ */
+}
+
+/* แอนิเมชัน Floating Label ของตัว Custom */
+.custom-select-box.has-value ~ .custom-label,
+.custom-select-box.is-open ~ .custom-label {
+  bottom: 32px;
+  font-size: 10px;
 }

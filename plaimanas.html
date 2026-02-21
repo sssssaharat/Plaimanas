@@ -329,7 +329,7 @@
         <div class="inquiry-container">
 
             <div class="inquiry-content">
-                <h2 class="inquiry-title">MAKE AN<br>INQUIRY</h2>
+                <h2 class="inquiry-title">MAKE AN INQUIRY</h2>
                 <p class="inquiry-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non
                     rhoncus commodo.</p>
             </div>
@@ -339,37 +339,47 @@
                 <div class="radio-group">
                     <label class="custom-radio">
                         <input type="radio" name="work_type" value="onsite" checked>
-                        <span class="radio-mark"></span>
                         Onsite
                     </label>
                     <label class="custom-radio">
                         <input type="radio" name="work_type" value="hybrid">
-                        <span class="radio-mark"></span>
                         Hybrid
                     </label>
                 </div>
-
                 <div class="input-grid">
                     <div class="input-wrapper">
-                        <input type="text" placeholder="Full name*" required>
+                        <input type="text" id="fullname" placeholder=" " required>
+                        <label for="fullname" class="floating-label">Full name*</label>
                     </div>
 
                     <div class="input-wrapper">
-                        <label class="input-label">Email*</label>
-                        <input type="email" value="Plaimanas@gmail.com" required>
+                        <input type="email" id="email" placeholder=" " value="Plaimanas@gmail.com" required>
+                        <label for="email" class="floating-label">Email*</label>
                     </div>
 
                     <div class="input-wrapper">
-                        <input type="tel" placeholder="Phone Number*" required>
+                        <input type="tel" id="phone" placeholder=" " required>
+                        <label for="phone" class="floating-label">Phone Number*</label>
                     </div>
+                    <div class="input-wrapper custom-dropdown-wrapper">
 
-                    <div class="input-wrapper">
-                        <select required>
-                            <option value="" disabled selected hidden>Select Subject*</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="support">Support</option>
-                            <option value="sales">Sales</option>
+                        <select id="subject" name="subject" style="display: none;" required>
+                            <option value="" disabled selected></option>
+                            <option value="general">General inquiry</option>
+                            <option value="job">Job Application</option>
+                            <option value="media">Media & Press</option>
                         </select>
+
+                        <div class="custom-select-box" id="customSelectBox">
+                            <span class="custom-select-text"></span>
+                        </div>
+                        <label class="floating-label custom-label">Select Subject*</label>
+
+                        <div class="custom-options-list" id="customOptionsList">
+                            <div class="custom-option" data-value="general">General inquiry</div>
+                            <div class="custom-option" data-value="job">Job Application</div>
+                            <div class="custom-option" data-value="media">Media & Press</div>
+                        </div>
                     </div>
                 </div>
 
@@ -386,9 +396,8 @@
 
         </div>
     </section>
-    <script src="js/navbar.js"></script>
-    <script src="js/faq.js"></script>
 
 </body>
+<script src="js/script.js"></script>
 
 </html>

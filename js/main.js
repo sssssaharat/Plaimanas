@@ -1,2 +1,0 @@
-initNavbar();
-initStickyHeader();
