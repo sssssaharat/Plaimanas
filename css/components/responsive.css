@@ -87,6 +87,7 @@
 
   .navbar__link {
     font-size: 13px;
+    font-weight: 400;
   }
 
   .mobile-arrow {
@@ -151,9 +152,10 @@
     line-height: 0.8;
     text-align: center;
     color: #000;
-    letter-spacing: -2px;
-    margin-bottom: 4vw;
+    letter-spacing: 4px;
+    /* margin-bottom: 2vw; */
     white-space: nowrap;
+    transform: scaleY(0.7);
   }
   /* ===== collections ===== */
   .collections-grid {
@@ -215,7 +217,6 @@
   }
 
   .description-content h3 {
-    font-family: "Arial", sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 1;
@@ -225,7 +226,6 @@
   }
 
   .description-content p {
-    font-family: "Arial", sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
