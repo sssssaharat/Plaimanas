@@ -440,26 +440,23 @@
 .inquiry-section {
   background-color: #ffffff;
   padding: 80px 20px;
-  font-family: "Hanken Grotesk", sans-serif;
   color: #000000;
 }
 
 .inquiry-container {
-  max-width: 1092px; /* กว้างสุดตาม Figma Desktop */
+  max-width: 1092px;
   margin: 0 auto;
-
   display: flex;
   align-items: flex-start;
-  gap: 74px; /* ช่องไฟระหว่างข้อความกับฟอร์มเป๊ะๆ */
+  gap: 74px;
 }
 
-/* --- ด้านซ้าย (ข้อความ) --- */
 .inquiry-content {
   width: 100%;
-  max-width: 375px; /* ล็อคความกว้างเป๊ะๆ ตามรูป */
+  max-width: 375px;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* ระยะห่างระหว่างหัวข้อกับข้อความ */
+  gap: 16px;
 }
 
 .inquiry-title {
@@ -467,7 +464,7 @@
   font-weight: 900;
   line-height: 1;
   text-transform: uppercase;
-  margin: 0; /* ลบ margin เดิมทิ้ง เพราะเราใช้ gap จัดการแล้ว */
+  margin: 0;
   letter-spacing: -1px;
 }
 
@@ -478,16 +475,14 @@
   margin: 0;
 }
 
-/* --- ด้านขวา (ฟอร์ม) --- */
 .inquiry-form {
   width: 100%;
-  max-width: 644px; /* ล็อคความกว้างเป๊ะๆ ตามรูป */
+  max-width: 644px;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* ระยะห่าง 40px ตามรูป */
+  gap: 40px;
 }
 
-/* --- แต่ง Custom Radio Button ให้เป็นสีดำคลีนๆ --- */
 .radio-group {
   display: flex;
   gap: 24px;
@@ -501,7 +496,6 @@
   cursor: pointer;
 }
 
-/* ซ่อนสไตล์สีฟ้าของระบบ และวาดวงกลมใหม่ด้วย CSS */
 .custom-radio input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
@@ -515,7 +509,6 @@
   cursor: pointer;
 }
 
-/* จุดสีดำตรงกลางตอนถูกเลือก (Checked) */
 .custom-radio input[type="radio"]::before {
   content: "";
   width: 12px;
@@ -530,11 +523,10 @@
   transform: scale(1);
 }
 
-/* --- Inputs & Grid --- */
 .input-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 35px 24px; /* เพิ่มระยะห่างแนวตั้งนิดนึง เผื่อที่ให้ Label ลอยขึ้นไป */
+  gap: 35px 24px;
 }
 
 .input-wrapper {
@@ -542,7 +534,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 20px; /* เตรียมพื้นที่ด้านบนไว้ให้ Label ลอยไปเกาะ */
+  padding-top: 20px;
 }
 
 .input-wrapper input,
@@ -558,41 +550,32 @@
   outline: none;
 }
 
-/* ซ่อน Placeholder ดั้งเดิมที่เราใส่สเปซบาร์หลอกไว้ */
 .input-wrapper input::placeholder {
   color: transparent;
 }
 
-/* =========================================
-   ลูกเล่น FLOATING LABEL
-   ========================================= */
 .floating-label {
   position: absolute;
-  bottom: 8px; /* เริ่มต้นให้อยู่ทับเส้นบรรทัดพอดี */
+  bottom: 8px;
   left: 0;
   font-size: 14px;
   color: #999999;
-  pointer-events: none; /* เพื่อให้คลิกทะลุไปโดน input ได้ */
-  transition: all 0.3s ease; /* แอนิเมชันลอยขึ้นแบบสมูทๆ */
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
-/* เมื่อคลิก (focus) หรือ พิมพ์ไปแล้ว (not placeholder-shown) ให้ Label ลอยขึ้น! */
 .input-wrapper input:focus ~ .floating-label,
 .input-wrapper input:not(:placeholder-shown) ~ .floating-label {
-  bottom: 32px; /* ลอยขึ้นไปด้านบน */
-  font-size: 10px; /* ย่อขนาดให้เล็กเหมือนตัวอย่าง Email* */
+  bottom: 32px;
+  font-size: 10px;
 }
 
-/* สำหรับ Select: เมื่อถูกเลือกแล้ว (valid) หรือถูกคลิก (focus) ให้ลอยขึ้นเช่นกัน */
 .input-wrapper select:focus ~ .floating-label,
 .input-wrapper select:valid ~ .floating-label {
   bottom: 32px;
   font-size: 10px;
 }
 
-/* =========================================
-   แต่ง DROPDOWN SELECT ให้เป็นสีขาวคลีน
-   ========================================= */
 .input-wrapper select {
   -webkit-appearance: none;
   appearance: none;
@@ -605,24 +588,20 @@
   color-scheme: light;
 }
 
-/* ซ่อนตัวหนังสือระบบชั่วคราวตอนยังไม่เลือก (ให้โชว์แค่ Floating Label) */
 .input-wrapper select:invalid {
   color: transparent;
 }
 
-/* เมื่อเลือกข้อมูลแล้ว ให้ตัวหนังสือเปลี่ยนเป็นสีดำเข้ม */
 .input-wrapper select:valid {
   color: #000000;
 }
 
-/* บังคับพื้นหลัง Option เป็นสีขาว ตัวหนังสือดำ (แก้ปัญหาสีดำทะมึนใน Mac/iOS) */
 .input-wrapper select option {
   background-color: #ffffff;
   color: #000000;
   font-size: 14px;
 }
 
-/* Checkbox */
 .custom-checkbox {
   display: flex;
   align-items: center;
@@ -633,7 +612,6 @@
   cursor: pointer;
 }
 
-/* ปุ่ม Submit */
 .inquiry-submit {
   background-color: #000000;
   color: #ffffff;
@@ -652,19 +630,15 @@
   background-color: #333333;
 }
 
-/* =========================================
-   CUSTOM DROPDOWN (แก้ปัญหา Apple Dark Mode)
-   ========================================= */
 .custom-dropdown-wrapper {
   position: relative;
 }
 
-/* ปุ่ม Select จำลอง */
 .custom-select-box {
   width: 100%;
   border-bottom: 1px solid #000000;
   padding: 8px 0;
-  min-height: 35px; /* เผื่อความสูงให้เท่าช่องอื่น */
+  min-height: 35px;
   cursor: pointer;
   position: relative;
   font-family: "Hanken Grotesk", sans-serif;
@@ -672,7 +646,6 @@
   color: #000000;
 }
 
-/* รูปลูกศรของปุ่มจำลอง */
 .custom-select-box::after {
   content: "";
   position: absolute;
@@ -688,22 +661,20 @@
   pointer-events: none;
 }
 
-/* เมื่อคลิกเปิด ให้ลูกศรชี้ขึ้น */
 .custom-select-box.is-open::after {
   transform: translateY(-50%) rotate(180deg);
 }
 
-/* กล่องตัวเลือกสีขาว */
 .custom-options-list {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #ffffff; /* ขาวล้วนแน่นอน 100% */
+  background-color: #ffffff;
   border: 1px solid #e0e0e0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  display: none; /* ซ่อนไว้ก่อน */
+  display: none;
   flex-direction: column;
   margin-top: 4px;
 }
@@ -712,7 +683,6 @@
   display: flex;
 }
 
-/* รายการตัวเลือกด้านใน */
 .custom-option {
   padding: 12px 16px;
   font-size: 14px;
@@ -723,12 +693,113 @@
 }
 
 .custom-option:hover {
-  background-color: #f5f5f5; /* สีเทาอ่อนตอนเอาเมาส์ชี้ */
+  background-color: #f5f5f5;
 }
 
-/* แอนิเมชัน Floating Label ของตัว Custom */
 .custom-select-box.has-value ~ .custom-label,
 .custom-select-box.is-open ~ .custom-label {
   bottom: 32px;
   font-size: 10px;
+}
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+.site-footer {
+  background-color: #f8f9f8; /* สีพื้นหลังตามสเปค Figma เป๊ะๆ */
+  padding: 80px 20px 40px 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.footer-container {
+  max-width: 1092px; /* อิงความกว้างเดิมของหน้าเว็บ */
+  margin: 0 auto;
+}
+
+/* จัดเรียงเป็น 5 คอลัมน์ */
+.footer-links-grid {
+  display: grid;
+  /* ให้ 4 คอลัมน์แรกกว้างเท่ากัน และคอลัมน์ Newsletter กว้างขึ้นอีกนิด (2 ส่วน) */
+  grid-template-columns: repeat(4, 1fr) 2fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.footer-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 24px 0;
+  text-transform: uppercase;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 16px;
+}
+
+.footer-list a {
+  text-decoration: none;
+  font-size: 12px;
+  /* 👇 ใช้สีดำโปร่งใส 50% ตามที่คุณรีเควสไว้ตอนก่อนหน้า */
+  color: rgba(0, 0, 0, 0.5);
+  transition: color 0.2s ease;
+}
+
+.footer-list a:hover {
+  color: #000000; /* ชี้แล้วเข้มขึ้น */
+}
+
+/* ฟอร์ม Newsletter */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.newsletter-input-wrapper input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000000;
+  padding: 8px 0;
+  background: transparent;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  outline: none;
+  color: #000000;
+}
+
+.newsletter-input-wrapper input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.newsletter-submit {
+  width: 100%;
+  background-color: #e5e5e5; /* สีเทาอ่อนของปุ่มตามรูป */
+  color: #000000;
+  border: none;
+  padding: 14px 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-submit:hover {
+  background-color: #d4d4d4;
+}
+
+/* ส่วนลิขสิทธิ์ด้านล่างสุด */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #000000;
+  border-top: none; /* คลีนๆ ไม่ต้องมีเส้นคั่น */
 }
