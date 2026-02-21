@@ -704,29 +704,45 @@
 /* =========================================
    FOOTER SECTION
    ========================================= */
+
+.homepage-section {
+  background-color: #ffffff;
+  width: 100%;
+  padding-top: 40px; 
+}
+
+.footer-top-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 12px; 
+}
+
 .site-footer {
-  background-color: #f8f9f8; /* สีพื้นหลังตามสเปค Figma เป๊ะๆ */
-  padding: 80px 20px 40px 20px;
-  font-family: "Hanken Grotesk", sans-serif;
+  background-color: #f8f9f8;
+  width: 100%;
+  padding: 40px 0 40px 0;
 }
 
 .footer-container {
-  max-width: 1092px; /* อิงความกว้างเดิมของหน้าเว็บ */
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 0 40px; 
 }
 
-/* จัดเรียงเป็น 5 คอลัมน์ */
 .footer-links-grid {
   display: grid;
-  /* ให้ 4 คอลัมน์แรกกว้างเท่ากัน และคอลัมน์ Newsletter กว้างขึ้นอีกนิด (2 ส่วน) */
-  grid-template-columns: repeat(4, 1fr) 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2.5fr;
   gap: 40px;
-  margin-bottom: 80px;
+  padding: 0 40px;
+  margin-bottom: 60px;
 }
 
 .footer-title {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 400;
   color: #000000;
   margin: 0 0 24px 0;
   text-transform: uppercase;
@@ -745,20 +761,20 @@
 .footer-list a {
   text-decoration: none;
   font-size: 12px;
-  /* 👇 ใช้สีดำโปร่งใส 50% ตามที่คุณรีเควสไว้ตอนก่อนหน้า */
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.5);
   transition: color 0.2s ease;
 }
 
 .footer-list a:hover {
-  color: #000000; /* ชี้แล้วเข้มขึ้น */
+  color: #000000;
 }
 
-/* ฟอร์ม Newsletter */
 .newsletter-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .newsletter-input-wrapper input {
@@ -767,7 +783,6 @@
   border-bottom: 1px solid #000000;
   padding: 8px 0;
   background: transparent;
-  font-family: "Hanken Grotesk", sans-serif;
   font-size: 12px;
   outline: none;
   color: #000000;
@@ -779,13 +794,12 @@
 
 .newsletter-submit {
   width: 100%;
-  background-color: #e5e5e5; /* สีเทาอ่อนของปุ่มตามรูป */
+  background-color: #e5e5e5;
   color: #000000;
   border: none;
   padding: 14px 0;
-  font-family: "Hanken Grotesk", sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -794,12 +808,13 @@
   background-color: #d4d4d4;
 }
 
-/* ส่วนลิขสิทธิ์ด้านล่างสุด */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  font-weight: 400;
   color: #000000;
-  border-top: none; /* คลีนๆ ไม่ต้องมีเส้นคั่น */
+  width: 100%;
+  padding: 0 40px;
 }

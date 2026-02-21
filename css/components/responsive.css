@@ -255,19 +255,19 @@
 
   .faq-tabs {
     display: flex;
-    flex-direction: column; /* 👈 หัวใจสำคัญ: สั่งให้เรียงเป็นแนวตั้ง */
-    align-items: center; /* 👈 จัดให้อยู่กึ่งกลางหน้าจอ */
-    gap: 10px; /* 👈 ระยะห่าง 10px ตามสเปคเป๊ะๆ */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
 
     width: 100%;
-    max-width: 346px; /* 👈 ล็อคความกว้างตาม Figma */
-    margin: 0 auto 40px auto; /* จัดกึ่งกลาง และเว้นระยะด้านล่างก่อนถึงคำถาม */
+    max-width: 346px; 
+    margin: 0 auto 40px auto;
     padding: 0;
   }
 
   .faq-tab {
-    width: max-content; /* 👈 ให้ปุ่มหดพอดีกับตัวหนังสือข้างใน */
-    padding: 10px 24px; /* ปรับ padding ให้ปุ่มดูสวยสมส่วนกับแนวตั้ง */
+    width: max-content; 
+    padding: 10px 24px; 
     font-size: 11px;
     font-weight: 800;
     text-align: center;
@@ -322,24 +322,39 @@
   }
 
   /* ===== FOOTER (Mobile) ===== */
+  .homepage-section {
+    padding-top: 40px;
+  }
+
+  .footer-top-text {
+    margin-bottom: 24px; 
+    font-size: 14px;
+  }
+
   .site-footer {
-    padding: 60px 0 30px 0;
+    padding: 40px 0;
   }
 
   .footer-container {
-    max-width: 346px; /* บังคับกว้าง 346px ตามสเปค */
-    margin: 0 auto;
-    padding: 0 22px;
+    padding: 0 24px; 
   }
 
   .footer-links-grid {
-    grid-template-columns: 1fr 1fr; /* เปลี่ยนเป็น 2 คอลัมน์ */
-    gap: 40px 20px; /* ระยะห่าง: แนวตั้ง 40px แนวนอน 20px */
-    margin-bottom: 60px;
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px 16px;
+    padding: 0;
+    margin-bottom: 40px;
   }
 
   .footer-newsletter {
-    grid-column: span 2; /* 👈 ท่าไม้ตาย: สั่งให้คอลัมน์นี้กินพื้นที่ควบ 2 ช่อง (เต็มจอ) */
+    grid-column: span 2;
     margin-top: 10px;
+  }
+
+  .footer-bottom {
+    padding: 0;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
   }
 }
