@@ -182,13 +182,16 @@
 
   /* ===== featured ===== */
   .featured-block + .featured-block {
-    padding-top: 0;
+    padding-top: 60px;
   }
   .featured-block {
-    padding: 60px 22px 20px 22px;
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 24px 20px 24px;
   }
 
   .featured-block__media-wrapper {
+    width: 100%;
     aspect-ratio: 346 / 219;
   }
 
@@ -200,16 +203,28 @@
   }
 
   .featured-block__description {
+    width: 100%;
     margin-top: 24px;
-    padding: 0 10px;
+    padding: 0;
   }
 
   .description-content h3 {
+    font-family: "Arial", sans-serif;
     font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    color: #000;
   }
 
   .description-content p {
+    font-family: "Arial", sans-serif;
     font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-wrap: wrap;
   }
   .featured-block__sticky-track {
     top: 40%;
@@ -218,6 +233,7 @@
   .media-narrow {
     max-width: 282px !important;
     aspect-ratio: 282 / 286 !important;
+    margin: 0 auto;
   }
 
   /* ===== scrolling ===== */
