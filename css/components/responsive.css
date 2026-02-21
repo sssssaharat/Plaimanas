@@ -236,12 +236,24 @@
   .services-info {
     padding: 60px 0;
   }
+
   .services-info__container {
-    max-width: 346px;
-    margin: 0 auto;
-    padding: 0 22px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 24px;
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .service-item h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .service-item p {
+    font-size: 14px;
+    line-height: 1.6;
   }
   /* ===== FAQ ===== */
   .faq-section {
@@ -280,46 +292,6 @@
   }
 
   /* ===== MAKE AN INQUIRY (Mobile) ===== */
-
-  /* .inquiry-section {
-    padding: 60px 0;
-  }
-
-  .inquiry-container {
-    width: 100%;
-    max-width: 346px;
-    margin: 0 auto;
-    padding: 0;
-
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .inquiry-content {
-    max-width: 100%;
-    gap: 16px;
-  }
-
-  .inquiry-title {
-    font-size: 40px;
-    line-height: 1.1;
-  }
-
-  .inquiry-form {
-    max-width: 100%;
-    gap: 30px;
-  }
-
-  .input-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .inquiry-submit {
-    width: max-content;
-    padding: 16px 40px;
-    margin-top: 10px;
-  } */
   .inquiry-section {
     padding: 60px 0;
   }
