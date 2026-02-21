@@ -157,9 +157,11 @@
   }
   /* ===== collections ===== */
   .collections-grid {
-    max-width: 346px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 40px 24px;
     gap: 24px;
-    padding: 40px 0;
   }
 
   .collection-item {
@@ -174,6 +176,8 @@
   .collection-item__title {
     font-size: 20px;
     line-height: 1.2;
+    width: 100%;
+    padding: 0 10px;
   }
 
   /* ===== featured ===== */
