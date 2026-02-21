@@ -383,10 +383,6 @@
   border-bottom: 1px solid #333333;
 }
 
-.faq-item:first-child {
-  border-top: 1px solid #333333;
-}
-
 .faq-question {
   width: 100%;
   background: transparent;
